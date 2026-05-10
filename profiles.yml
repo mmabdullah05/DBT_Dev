@@ -1,0 +1,11 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      catalog: raw
+      schema: jaffle_shop
+      host: dbc-760fefa6-1c00.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/64f7d46d4611c0db
+      token: []
+      threads: 4
