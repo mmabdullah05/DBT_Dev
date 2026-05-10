@@ -7,7 +7,12 @@
     Try changing "table" to "view" below
 */
 
-{{ config(materialized='table') }}
+{{ config(
+    materialized='table',
+    catalog='raw',
+    schema='jaffle_shop'
+) }}
+
 
 with source_data as (
 
