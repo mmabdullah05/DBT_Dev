@@ -8,7 +8,7 @@
 */
 
 {{ config(
-    materialized='table',
+    materialized='view',
     catalog='raw',
     schema='jaffle_shop'
 ) }}
