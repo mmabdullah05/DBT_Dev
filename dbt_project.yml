@@ -1,4 +1,4 @@
-name: 'my_new_project'
+name: 'DBT_DEV_PROJECT'
 version: '1.0.0'
 config-version: 2
 
@@ -23,9 +23,13 @@ vars:
   catalog: 'raw'
 
 models:
-  my_new_project:
+  DBT_DEV_PROJECT:
     +pre-hook: "USE CATALOG raw"
     +schema: jaffle_shop
     +catalog: raw
     example:
       +materialized: table
+    Marts:
+      +materialized: table
+    Staging:
+      +materialized: view
