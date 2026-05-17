@@ -5,5 +5,5 @@
   paymentmethod as payment_method,
   amount as payment_amount,
   created as purchase_date
- from raw.stripe.payments
+ from {{ source('stripe', 'payments') }}
   where status = 'success'
