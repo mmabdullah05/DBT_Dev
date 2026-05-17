@@ -24,5 +24,5 @@ select *
 )
 
 select 
-customer_id,order_id,payment_amount
+order_id,customer_id,payment_amount as amount
  from fct
