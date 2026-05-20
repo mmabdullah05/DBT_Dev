@@ -5,9 +5,10 @@ models:
         data_tests:
           - unique
           - not_null
-          
-          
-  - name: stg_jaffle_shop_orders 
+      - name: first_name
+      - name: last_name
+
+  - name: stg_jaffle_shop_orders
     columns:
       - name: order_id
         data_tests:
@@ -16,11 +17,9 @@ models:
       - name: status
         data_tests:
           - accepted_values:
-              values: ['completed','shipped','placed','return_pending','returned']
-
+              values: ['completed', 'shipped', 'placed', 'return_pending', 'returned']
       - name: customer_id
         data_tests:
-          - relationships: 
+          - relationships:
               to: ref('stg_jaffle_shop_customers')
               field: customer_id
-      
